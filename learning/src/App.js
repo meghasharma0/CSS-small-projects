@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import './App.css';
-import UseEffect from './function/UseEffect';
+import Counter from './function/Counter';
+import { MyContext } from './function/context/useContext';
 
 function App() {
 
-  const [state, setState] = useState(true);
+  const counterState = useContext(MyContext);
 
   return (
     <>
-      <button onClick={() => setState(!state)}>Click Me</button>
-      <div>{state === true ? <UseEffect /> : ""}</div>
+    <h1>Counter : {counterState.count}</h1>
+      <Counter />
+      <Counter />
+      <Counter />
+      <Counter />
     </>
   );
 }
