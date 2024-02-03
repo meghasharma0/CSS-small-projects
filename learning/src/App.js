@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import './App.css';
-import States from './class/States';
+import UseEffect from './function/UseEffect';
 
 function App() {
+
+  const [state, setState] = useState(true);
+
   return (
     <>
-      <States />
+      <button onClick={() => setState(!state)}>Click Me</button>
+      <div>{state === true ? <UseEffect /> : ""}</div>
     </>
   );
 }
