@@ -1,10 +1,12 @@
 import './App.css';
-import Message from './class/Message';
+import Greeting from './class/challange1/Greeting';
+import Header from './class/challange1/Header';
 
 function App() {
   return (
     <>
-      <Message message="good morning" />
+      <Header username="Ayisha" />
+      <Greeting />
     </>
   );
 }
